@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Emissions barely changed. The air flipped.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<a class="skip" href="#flip">Skip to the chart</a>
+<nav><div class="wrap"><a href="#flip">The flip</a><a href="#why">Why</a><a href="#zones">Climate zones</a><a href="#act">What policy can do</a><a href="agent.html">Policy agent</a></div></nav>
+<header class="hero"><div class="wrap">
+  <h1>Emissions barely changed.<br>The air flipped.</h1>
+  <p class="lead">In winter 2022–23, north India breathed up to <b data-bind="northDrop"></b> cleaner air than usual while Mumbai’s PM2.5 rose <b data-bind="mumbai"></b>. A year later the two swapped places. The difference was the weather, not the chimneys.</p>
+</div></header>
+<main>
+<section id="flip"><div class="wrap">
+  <div class="toggle" role="group" aria-label="Choose a winter">
+    <button data-w="w2223" aria-pressed="true"><span id="t1"></span><small id="e1"></small></button>
+    <button data-w="w2324" aria-pressed="false"><span id="t2"></span><small id="e2"></small></button>
+  </div>
+  <p class="caption" id="caption" aria-live="polite"></p>
+  <div class="axis"><span></span><span class="ends"><span>← cleaner than the 2019–22 winter average</span><span>dirtier →</span></span></div>
+  <div id="chart"></div>
+  <p class="key"><i class="sw solid"></i>% change stated in the article <i class="sw hatch"></i>direction only; the article’s chart shows the direction but the size is not stated.</p>
+  <p class="src">Source: Times of India report on the study in <em>Atmospheric Pollution Research</em>. Directions for cities without a stated figure are read from the article’s chart; check them against the paper.</p>
+</div></section>
+
+<section id="why"><div class="wrap narrow">
+  <h2>Same smoke, different wind</h2>
+  <p>El Niño and La Niña are the two phases of ENSO, a natural cycle in the Pacific Ocean. Each rearranges the winter winds over India. The study found that this changed where PM2.5 was carried and where it was trapped.</p>
+  <h3>La Niña, 2022–23</h3>
+  <p>Stronger winds over the north dispersed smoke from stubble burning and local sources. The circulation bypassed Delhi and carried pollutants south to cities such as Mumbai and Thiruvananthapuram. Rain also helped: rainfall was more closely tied to lower PM2.5 that winter.</p>
+  <h3>El Niño, 2023–24</h3>
+  <p>Winds over the north were weaker and moved through Delhi and Jaipur instead of carrying pollution away. High pressure, weak winds and a shallow boundary layer, a thin layer of air near the ground, kept PM2.5 close to the surface. Backward air-mass tracing showed Jaipur kept receiving polluted northern air, while Hyderabad received cleaner air from the sea and the south.</p>
+  <p class="callout">Year to year, PM2.5 moved from about <b data-bind="swingLow"></b> to <b data-bind="swingHigh"></b> against the 2019–22 average with no major change in emissions or pollution-control policy.</p>
+  <h3>What the study does not say</h3>
+  <p>The authors stress that the link is correlation, not proven cause, and cannot be applied to other years. El Niño does not always worsen air in Delhi. Only two unusual winters were studied, and the authors do not imply the 2023–24 pattern will repeat this winter.</p>
+</div></section>
+
+<section id="zones"><div class="wrap">
+  <div class="narrow"><h2>The climate map is moving too</h2>
+  <p>A separate study by IMD and the Indian Institute of Tropical Meteorology compared India’s climate map decade by decade from 1951 to 2020. In the northwest the hot, dry zone has grown and pushed east into Uttar Pradesh, one of the country’s most important farming regions. In the peninsula, rising rainfall moved most of the old hot semi-arid land into the wetter tropical savannah zone, which now covers about three-quarters of the region.</p></div>
+  <div id="zonechart"></div>
+  <p class="key"><i class="sw hatch slate"></i>1951–60 <i class="sw ink"></i>1991–2020 (northwest India); the article gives the peninsular change without dates.</p>
+  <div class="narrow"><p>Marathwada and west Vidarbha moved into the hot semi-arid zone, and the tropical monsoon zone stretched along the Konkan coast, coastal Karnataka and Kerala. For farmers, the timing of sowing and harvesting needs close watching.</p>
+  <p class="src">Source: Times of India report on the IMD/IITM study led by Ananya Karmakar. Bars show approximate shares as reported.</p></div>
+</div></section>
+
+<section id="act"><div class="wrap">
+  <div class="narrow"><h2>What policy can do when weather decides</h2>
+  <p>If weather can swing PM2.5 by tens of percent, cutting local emissions is necessary but not enough to promise a clean winter. These three options are proposals this project explores. They are not conclusions of the studies.</p></div>
+  <div class="levers" id="levers"></div>
+  <div class="cta">
+    <a class="btn" href="agent.html">Ask the policy agent</a>
+    <a class="btn alt" id="chatlink" href="#">Chat with the fine-tuned assistant in Colab</a>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">Built for the Open Book Lab Exam, Assignment C. Figures come from Times of India reports on two published studies; verify before citing elsewhere. Informational project, not an official forecast or advice.</div></footer>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>

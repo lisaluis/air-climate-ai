@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Policy agent: air quality and climate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<nav><div class="wrap"><a href="index.html">← Explainer</a><a href="#out">Results</a></div></nav>
+<header class="hero"><div class="wrap">
+  <h1>Policy agent</h1>
+  <p class="lead">Ask how policy should adapt when weather, not just emissions, drives air quality. The agent reads only the sourced facts below, then returns three options with evidence, trade-offs and how strong the evidence is.</p>
+</div></header>
+<main><section><div class="wrap narrow">
+  <div class="panel">
+    <label for="q"><b>Your question</b></label>
+    <textarea id="q" rows="3" maxlength="500">How should pollution and agriculture policy adapt when weather, not just emissions, drives outcomes?</textarea>
+    <div class="chips" id="chips"></div>
+    <button class="btn" id="go">Get policy options</button>
+  </div>
+  <div id="out" aria-live="polite"></div>
+  <p class="note">These are options for officials to weigh, not decisions. Fact ids (F1…) show which source each claim rests on; hover one to read it.</p>
+</div></section></main>
+<script src="agent.js"></script>
+</body></html>
