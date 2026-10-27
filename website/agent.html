@@ -12,6 +12,11 @@
   <p class="lead">Ask how policy should adapt when weather, not just emissions, drives air quality. The agent reads only the sourced facts below, then returns three options with evidence, trade-offs and how strong the evidence is.</p>
 </div></header>
 <main><section><div class="wrap narrow">
+  <div id="keybox" class="panel" hidden style="margin-bottom:1rem">
+    <label for="key"><b>Groq API key</b> (free at console.groq.com)</label>
+    <input id="key" type="password" autocomplete="off" placeholder="gsk_...">
+    <p class="note">This page has no server of its own, so your question goes from this browser tab straight to Groq. The key is kept only in this tab and is never saved to GitHub. Use a key you can revoke afterwards.</p>
+  </div>
   <div class="panel">
     <label for="q"><b>Your question</b></label>
     <textarea id="q" rows="3" maxlength="500">How should pollution and agriculture policy adapt when weather, not just emissions, drives outcomes?</textarea>
